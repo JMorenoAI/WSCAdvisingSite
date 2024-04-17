@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html>
 <html b:version='2' class='v2' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
-    <head>
-        <meta content='IE=EmulateIE7' http-equiv='X-UA-Compatible'/>
-        <b:if cond='data:blog.isMobile'>
-            <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0' name='viewport'/>
-            <b:else/>
-            <meta content='width=1100' name='viewport'/>
-        </b:if>
-        <b:include data='blog' name='all-head-content'/>
-        <title>
-            <data:blog.pageTitle/>
-        </title>
+<head>
+    <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css' rel='stylesheet'/>
+    <meta content='IE=EmulateIE7' http-equiv='X-UA-Compatible'/>
+    <b:if cond='data:blog.isMobile'>
+        <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0' name='viewport'/>
+        <b:else/>
+        <meta content='width=1100' name='viewport'/>
+    </b:if>
+    <b:include data='blog' name='all-head-content'/>
+    <title><data:blog.pageTitle/></title>
         <b:skin><![CDATA[
             /*
 -----------------------------------------------
@@ -23,6 +22,99 @@ DOWNLOAD FROM: www.wscesadvising.BLOGSPOT.com
         ]]></b:skin>
     </head>
     <body>
+<!-- Navigation Bar -->
+<div class='navbar'>
+    <div class='logo'/>
+    <nav>
+        <ul id='MenuItems'>
+            <li><a href='https://wscesadvising.blogspot.com/'>Chatbot</a></li>
+            <li><a href='#'>ES System</a></li>
+            <li><a href='#'>About</a></li>
+            <li><a href='#'>Contact</a></li>
+        </ul>
+    </nav>
+    <img class='menu-icon' onclick='menutoggle()' src='https://cdn1.iconfinder.com/data/icons/heroicons-ui/24/menu-512.png'/>
+</div>
+ <style>
+      /* Navbar styling */
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f3f3f3;
+    justify-content: space-between;
+}
+
+.navbar .logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.navbar nav {
+    flex: 1;
+    text-align: right;
+}
+
+.navbar nav ul {
+    display: inline-block;
+    list-style-type: none;
+}
+
+.navbar nav ul li {
+    display: inline;
+    margin-left: 10px;
+}
+
+.navbar nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-size: 18px;
+    padding: 7px 10px;
+    border-radius: 3px;
+}
+
+.navbar nav ul li a:hover {
+    background-color: #ddd;
+}
+
+.menu-icon {
+    width: 28px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Responsive styling */
+@media screen and (max-width: 800px) {
+    .navbar nav ul {
+        position: absolute;
+        width: 100%;
+        background-color: #f3f3f3;
+        display: none;
+        top: 60px;
+        left: 0;
+        text-align: center;
+    }
+
+    .navbar nav ul li {
+        display: block;
+        margin-top: 10px;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+      </style>
+      <script>
+        function menutoggle() {
+    var menuItems = document.getElementById(&#39;MenuItems&#39;);
+    if (menuItems.style.display === &#39;block&#39;) {
+        menuItems.style.display = &#39;none&#39;;
+    } else {
+        menuItems.style.display = &#39;block&#39;;
+    }
+}
+      </script>
           <style>
         h1 {
             color: #231F20; /* A nice shade of Black */
@@ -31,11 +123,14 @@ DOWNLOAD FROM: www.wscesadvising.BLOGSPOT.com
             text-shadow: 2px 2px 4px #000000; /* Subtle shadow for depth */
         }
     </style>
+
         <center>
-            <h1> WSC Advising Bot </h1>
+            <h1> WSC Advising </h1>
         </center>
-      
-<style>
+
+<section id='chatbot'>
+  <h3>Chatbot</h3>
+      <style>
     .tawkto-iframe {
         border: 1px solid #000;
         width: 100%;
@@ -45,18 +140,26 @@ DOWNLOAD FROM: www.wscesadvising.BLOGSPOT.com
 </style>
 
 <iframe allowfullscreen='true' class='tawkto-iframe' name='tawkto' src='https://tawk.to/chat/65f33e8f8d261e1b5f6db2ae/1hov2oobm'/>
+  </section> 
 
-      <!--Start Please keep the Credits intact-->
-        <div style='margin-top:50px; '>
-            <center>
-                <p class='author'>&#169; 
-                    <b>Powered by Joshua Moreno</b> Collaboration with
-                    <a href='https://wscesadvising.blogspot.com/'> ES Advising Project Group </a>
-                </p>
-            </center>
-        </div>
-        <b:section class='navbar' id='navbar' maxwidgets='1' showaddelement='no'/>
-        <b:section id='main'/>
-        <!-- End Please keep the Credits intact-->
-    </body>
+<section id='section2'>
+  <h3>Section 2</h3>
+  <p>Content for section 2...</p>
+</section>
+
+<section id='section3'>
+  <h3>Section 3</h3>
+  <p>Content for section 3...</p>
+</section>
+    <b:section id='main'/>
+      
+  <!-- Credits -->
+    <div style='margin-top:50px;'>
+        <center>
+            <p class='author'>&#169; <b>Powered by Joshua Moreno</b> Collaboration with
+                <a href='https://wscesadvising.blogspot.com/'>ES Advising Project Group</a>
+            </p>
+        </center>
+    </div>
+</body>
 </html>
